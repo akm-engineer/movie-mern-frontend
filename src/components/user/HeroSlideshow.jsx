@@ -26,7 +26,7 @@ export default function HeroSlidShow() {
     if (error) return updateNotification("error", error);
 
     setSlides([...movies]);
-    setCurrentSlide(movies[0]);
+    if (movies.length) setCurrentSlide(movies[0]);
   };
 
   const startSlideShow = () => {
